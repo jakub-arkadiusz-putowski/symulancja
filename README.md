@@ -21,7 +21,7 @@ chmox +x tools/*.sh
 ./tools/download_px4.sh
 ./tools/setup_px4.sh
 ./tools/run_px4_sitl.sh
-
+```
 
 ### Docs
 https://docs.px4.io/main/en/sim_gazebo_gz/
