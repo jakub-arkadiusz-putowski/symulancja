@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#download_px4.sh
 #git clone https://github.com/PX4/PX4-Autopilot.git
 
 #instalka px4
