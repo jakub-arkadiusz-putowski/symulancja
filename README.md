@@ -24,7 +24,14 @@ chmox +x tools/*.sh
 ```
 
 ### Docs
-https://docs.px4.io/main/en/sim_gazebo_gz/
+dokumentacja calej pracy
+
+- PX4 Gazebo sim: https://docs.px4.io/main/en/sim_gazebo_gz/
+- PX4 ROS2 guide: https://docs.px4.io/main/en/ros2/
+- PX4 Autopilot repo: https://github.com/PX4/PX4-Autopilot
+- ROS2 humble: https://docs.ros.org/en/humble/index.html
+- Gazebo: https://gazebosim.org/docs
+
 (uzupelnij dziadu)
 
 ### execute stare teraz jest usage
