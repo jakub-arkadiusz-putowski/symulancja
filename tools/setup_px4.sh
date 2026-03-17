@@ -8,5 +8,3 @@ if [ ! -d "$PX4_DIR" ]; then
   echo "wykonaj ./tools/download_px4.sh"
   exit 1
 fi
-
-echo 
