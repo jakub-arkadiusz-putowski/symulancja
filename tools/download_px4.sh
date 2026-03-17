@@ -1,12 +1,8 @@
 #!/bin/bash
 
-#download_px4.sh
-#git clone https://github.com/PX4/PX4-Autopilot.git
-
 #instalka px4
 REPO_URL="https://github.com/PX4/PX4-Autopilot.git"
 TARGET_DIR="PX4-Autopilot"
-
 
 
 if [ -d "$TARGET_DIR" ]; then
