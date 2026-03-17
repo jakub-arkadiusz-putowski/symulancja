@@ -1,4 +1,12 @@
 # Symulancja
+docelowo jest utworzenie repo w ktorym poprzez odpowiedni link mozna wykonc:
+za pomoca jednej komendy
+1. instalacje calego pakietu px4 ros2 i gazebo
+2. uruchomienie calego srodowiska i symulcji
+
+coś jak w teorii
+https://raw.githubusercontent.com/jakub-arkadiusz-putowski/symulancja/INSTALKA???
+https://raw.githubusercontent.com/jakub-arkadiusz-putowski/symulancja/INIT_SIM???
 
 ## Target srodowisk
 -ub22.04
