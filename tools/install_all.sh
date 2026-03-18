@@ -22,3 +22,4 @@ chmod +x tools/*.sh
 #instalowanie zaleznosci?
 ./tools/install_dependencies.sh
 ./tools/download_px4.sh
+./tools/install_ros2.sh
