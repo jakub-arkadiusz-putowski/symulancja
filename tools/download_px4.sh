@@ -1,14 +1,10 @@
-#!/bin/bash
+#!usr/bin/env bash
+set -euo pipefail
 
 #instalka px4
-REPO_URL="https://github.com/PX4/PX4-Autopilot.git"
-TARGET_DIR="PX4-Autopilot"
+PX4_DIR="$HOME/symulancja/PX4-Autopilot"
+PX4_URL="https://github.com/PX4/PX4-Autopilot.git"
 
-
-if [ -d "$TARGET_DIR" ]; then
-  echo "'$TARGET_DIR' juz istnieje"
-else
-  echo "instalka '$TARGET_DIR'"
-  git clone "$REPO_URL" "$TARGET_DIR"
-  echo "repo px4 siedzi w '$TARGET_DIR'"
+if [ ! -d "$PX4_DIR"]; then
+  git clone "$PX4_URL" --branch v1.14.3 --recursive "$PX4_DIR"
 fi
