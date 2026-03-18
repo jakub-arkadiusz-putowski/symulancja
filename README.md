@@ -14,11 +14,17 @@ https://raw.githubusercontent.com/jakub-arkadiusz-putowski/symulancja/INIT_SIM??
 -gz harmonic
 -px4 autopilot
 
-## available tools ze to co jest zrobione
-- `tools/download_px4.sh` – clone PX4 source code
-- `tools/install_ros2.sh`
-- itd itd itd do zrobienia duperele poki co nie istotne
+## GOTOWE
+- download_px4.sh
+- 
+## DO ZROBIENIA
+-
 
+## PO CO TO JEST?
+- do zainstalowania na raz ros2 gazebo i px4
+- do odpalenia gotowej symulacji pokazowej gz_x500
+
+  
 ## usage
 execute in order kurwa mac:
 ```bash
