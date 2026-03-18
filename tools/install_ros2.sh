@@ -1,24 +1,33 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
-#zmienne w pamieci
-UBUNTU_DISTRO="$(lsb_release -cs)"
-ROS_DISTRO="humble"
 
-#instalka ros2 na ub jammy
-#jesli ubunciak nie jest jammy czyli 20.04 to sie wyykrzacza
-if [ "$UBUNTU_DISTRO" != "jammy" ]; then
-  echo "dupa zbita bo ub w distro $UBUNTU_DISTRO zamiast w jammy"
-fi
+## INSTALACJA ROSA2 z docsow
+# ros2 humble
+# https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html
 
-#dodanie repo rosa2
-sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key \
-  -o /usr/share/keyrings/ros-archive-keyring.gpg
+sudo apt update && sudo apt install -y locales
+sudo locale-gen en_US en_US.UTF-8
+sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $UBUNTU_DISTRO main" | \
-  sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+## SETUP SOURCES
+sudo apt install software-properties-common
+sudo add-apt-repository universe
+sudo apt update && sudo apt install curl -y
+export ROS_APT_SOURCE_VERSION=$(curl -s https://api.github.com/repos/ros-infrastructure/ros-apt-source/releases/latest | grep -F "tag_name" | awk -F'"' '{print $4}')
+curl -L -o /tmp/ros2-apt-source.deb "https://github.com/ros-infrastructure/ros-apt-source/releases/download/${ROS_APT_SOURCE_VERSION}/ros2-apt-source_${ROS_APT_SOURCE_VERSION}.$(. /etc/os-release && echo ${UBUNTU_CODENAME:-${VERSION_CODENAME}})_all.deb"
+sudo dpkg -i /tmp/ros2-apt-source.deb
 
-#instalka ros2
+## INSTALACJA ZALEZNOSCI ROS2
 sudo apt update
-sudo apt install -y \
-  ros-$ROS_DISTRO-desktop \
-  ros-dev-tools
+sudo apt upgrade
+
+# instalacja ROS z RViz, demkami i tutorialami
+# instalka narzedzi deweloperskich
+sudo apt install ros-humble-ros-base
+sudo apt install ros-dev-tools
+
+
+## CONFIG SRODOWISKA
+source /opt/ros/humble/setup.bash
