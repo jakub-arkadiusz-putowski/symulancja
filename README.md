@@ -18,7 +18,7 @@ https://raw.githubusercontent.com/jakub-arkadiusz-putowski/symulancja/INIT_SIM??
 - download_px4.sh
 - 
 ## DO ZROBIENIA
--
+-dl ros2 humble
 
 ## PO CO TO JEST?
 - do zainstalowania na raz ros2 gazebo i px4
