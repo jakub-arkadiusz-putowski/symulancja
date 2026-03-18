@@ -16,8 +16,9 @@ https://raw.githubusercontent.com/jakub-arkadiusz-putowski/symulancja/INIT_SIM??
 
 ## GOTOWE
 - download_px4.sh
-- install_ros2.sh SPRAWDZ!
-- 
+- install_ros2.sh sprawdz!
+- install_gazebo.sh sprawdz!
+  
 ## DO ZROBIENIA
 - dl ros2 humble
 - dl gazebo ignition
