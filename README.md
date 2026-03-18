@@ -16,10 +16,12 @@ https://raw.githubusercontent.com/jakub-arkadiusz-putowski/symulancja/INIT_SIM??
 
 ## GOTOWE
 - download_px4.sh
+- install_ros2.sh SPRAWDZ!
 - 
 ## DO ZROBIENIA
--dl ros2 humble
-
+- dl ros2 humble
+- dl gazebo ignition
+  
 ## PO CO TO JEST?
 - do zainstalowania na raz ros2 gazebo i px4
 - do odpalenia gotowej symulacji pokazowej gz_x500
